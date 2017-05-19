@@ -1,7 +1,5 @@
 import React from 'react';
-import OverallWinrate from './OverallWinrate';
-import RecentPlayers from './RecentPlayers';
-import RecentSessions from './RecentSessions';
+import Session from './Session';
 
 const user ={
     winrate: 36,
@@ -26,16 +24,15 @@ const user ={
     }]
 }
 
-export default function Dashboard() {
+export default function AllSessions() {
+    
     return (
         <div>
-            <header>MattLong87's Dashboard</header>
-
-            <OverallWinrate winrate={user.winrate} />
-
-            <RecentPlayers recentPlayers={user.recentPlayers} />
-
-            <RecentSessions sessions={user.sessions} />
+            {user.sessions.map(function (session, i) {
+                return (
+                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} />
+                )
+            })}
         </div>
-    );
+    )
 }

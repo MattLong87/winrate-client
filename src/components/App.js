@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Dashboard from './Dashboard';
+import NavBar from './NavBar';
+import AllSessions from './AllSessions';
+import AddSession from './AddSession';
+import Login from './Login';
+import SignUp from './SignUp';
 
 class App extends Component {
 
@@ -10,8 +15,13 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <NavBar className='navbar' />
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/all-sessions' component={AllSessions} />
+          <Route exact path='/add-session' component={AddSession} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/sign-up' component={SignUp} />
         </div>
       </Router>
     );

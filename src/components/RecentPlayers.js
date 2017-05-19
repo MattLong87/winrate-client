@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function RecentPlayers(props) {
-    let lis = props.recentPlayers.map((player) => {
-        return <li>{player}</li>
+    let lis = props.recentPlayers.map((player, i) => {
+        return <li key={i}>{player}</li>
     })
     return (
         <div>
