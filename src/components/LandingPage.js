@@ -1,10 +1,13 @@
 import React from 'react';
+import logo from '../../img/logo.png';
+
+import '../css/landingpage.css';
 
 export default function LandingPage() {
     return (
         <div className='landing-page'>
             <header>
-                <img src='/img/logo.png' alt='WinRate Logo' />
+                <img src={logo} alt='WinRate Logo' />
                 <h2>Stat Tracking for Boardgamers</h2>
             </header>
             <main>

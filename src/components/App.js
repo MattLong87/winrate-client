@@ -1,3 +1,4 @@
+import 'reset-css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
@@ -8,9 +9,7 @@ import AddSession from './AddSession';
 import Login from './Login';
 import SignUp from './SignUp';
 
-import 'reset-css';
 import '../css/winrate.css';
-import '../css/landingpage.css';
 
 export class App extends Component {
 

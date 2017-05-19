@@ -3,7 +3,7 @@ import React from 'react';
 export default function SignUp() {
 
     return (
-        <form class='signup-form'>
+        <form className='signup-form'>
             <div>
                 <label for="first-name">First name</label>
                 <input placeholder='First Name' type="text" name='first-name' id='first-name' />

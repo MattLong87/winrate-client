@@ -6,7 +6,7 @@ import RecentSessions from './RecentSessions';
 
 export function Dashboard(props) {
     return (
-        <div>
+        <div className='dashboard'>
             <header>MattLong87's Dashboard</header>
 
             <OverallWinrate winrate={props.user.winrate} />

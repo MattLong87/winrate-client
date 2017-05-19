@@ -1,0 +1,17 @@
+.session{
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.session .title{
+    font-size: 18pt;
+}
+
+.session .session-info{
+    max-height: 0px;
+    transition: all .4s ease;
+}
+
+.session .expanded + .session-info{
+    max-height: 400px;
+}

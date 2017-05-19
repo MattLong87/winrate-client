@@ -1,19 +1,26 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 
-export default function AddSession() {
+export class AddSession extends React.Component {
 
-    return (
+    addSession(e){
+        e.preventDefault();
+        this.props.dispatch(actions.addSession({game: this.gameName.value}));
+    }
+
+    render(){ return (
         <div>
             <h1>Add a Session</h1>
-            <form id="js-add-session">
+            <form id="js-add-session" onSubmit={(e) => this.addSession(e)}>
                 <div className="game-name">
                     <label htmlFor="game">Game:</label>
-                    <input className="typeahead" id="js-select-game" type="text" name="game" placeholder="Game Name" />
+                    <input className="typeahead" id="js-select-game" type="text" name="game" placeholder="Game Name" ref={(a)=>{this.gameName = a}}/>
                 </div>
                 <div className="players-input">
                     <section id="players-input">
                         <label htmlFor="players">Players:</label>
-                        <input className="typeahead" id="js-add-player" type="text" placeholder="Add a Player" />
+                        <input className="typeahead" id="js-add-player" type="text" placeholder="Add a Player" ref={(a)=>{this.players = a}}/>
                         <section id="js-players-added" className="players-added"></section>
                     </section>
                 </div>
@@ -31,5 +38,11 @@ export default function AddSession() {
                 <span className="js-winner"></span>
             </section>
         </div>
-    )
+    )}
 }
+
+const mapStateToProps = state => ({
+    user: state.user
+});
+
+export default connect(mapStateToProps)(AddSession);

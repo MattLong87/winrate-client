@@ -4,6 +4,11 @@
     padding: 30px 0;
 }
 
+.landing-page img{
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
 .landing-page h2{
     font-size: 16pt;
     text-transform: lowercase;

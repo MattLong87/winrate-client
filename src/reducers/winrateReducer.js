@@ -1,4 +1,4 @@
-//import * as actions from '../actions';
+import * as actions from '../actions';
 
 const initialState = {
     user: {
@@ -25,6 +25,15 @@ const initialState = {
     }
 }
 
-export const winrateReducer = (state = initialState) => {
+export const winrateReducer = (state = initialState, action) => {
+    if (action.type === actions.ADD_SESSION){
+        var newState = {user:{}};
+        for (var key in state.user){
+            newState.user[key] = state.user[key];
+        }
+        newState.user.sessions.push(action.session);
+        return newState;
+    }
+
     return state;
 }
