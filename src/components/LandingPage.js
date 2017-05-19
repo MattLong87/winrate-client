@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function LandingPage() {
     return (
-        <div>
+        <div className='landing-page'>
             <header>
-                <h1>WinRate</h1>
+                <img src='/img/logo.png' alt='WinRate Logo' />
                 <h2>Stat Tracking for Boardgamers</h2>
             </header>
             <main>

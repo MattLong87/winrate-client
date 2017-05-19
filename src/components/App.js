@@ -7,7 +7,10 @@ import AllSessions from './AllSessions';
 import AddSession from './AddSession';
 import Login from './Login';
 import SignUp from './SignUp';
-//import 'reset-css';
+
+import 'reset-css';
+import '../css/winrate.css';
+import '../css/landingpage.css';
 
 export class App extends Component {
 

@@ -1,0 +1,21 @@
+.landing-page header{
+    background-color: #F5AB35;
+    color: white;
+    padding: 30px 0;
+}
+
+.landing-page h2{
+    font-size: 16pt;
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.landing-page h3{
+    font-size: 18pt;
+    margin-top: 30px;
+}
+
+.landing-page li{
+    font-size: 14pt;
+    margin: 10px 0;
+}

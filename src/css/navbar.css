@@ -1,7 +1,7 @@
 nav{
     background-color: #333;
     color: #fff;
-    height: 40px;
+    height: 60px;
 }
 
 nav li{
@@ -11,4 +11,9 @@ nav li{
 
 nav a{
     color: #fff;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 3px;
+    line-height: 60px;
 }
