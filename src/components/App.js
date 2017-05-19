@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Dashboard from './Dashboard';
 import NavBar from './NavBar';
@@ -8,7 +7,7 @@ import AllSessions from './AllSessions';
 import AddSession from './AddSession';
 import Login from './Login';
 import SignUp from './SignUp';
-//import Styles from 'reset-css';
+//import 'reset-css';
 
 export class App extends Component {
 
