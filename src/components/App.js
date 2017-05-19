@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 import LandingPage from './LandingPage';
 import Dashboard from './Dashboard';
 import NavBar from './NavBar';
@@ -7,9 +8,9 @@ import AllSessions from './AllSessions';
 import AddSession from './AddSession';
 import Login from './Login';
 import SignUp from './SignUp';
+//import Styles from 'reset-css';
 
-class App extends Component {
-
+export class App extends Component {
 
   render() {
     return (
@@ -28,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
