@@ -27,7 +27,6 @@ export const logInUser = () => dispatch => {
             return res.json();
         }).then(userData => {
             dispatch(logInUserSuccess(userData));
-            window.history.pushState({}, "", "dashboard")
         }).catch(err => dispatch(logInUserError(err)));
 };
 

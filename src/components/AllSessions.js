@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import Session from './Session';
 
 export function AllSessions(props) {
-    console.log(props.user.sessions);
     return (
         <div>
             {props.user.sessions.map(function (session, i) {
