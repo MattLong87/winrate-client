@@ -2,6 +2,12 @@
     background-color: #F5AB35;
     color: white;
     padding: 30px 0;
+    /*clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);*/
+}
+
+body{
+    background: #002D45;
+    color: #fff;
 }
 
 .landing-page img{
@@ -23,4 +29,12 @@
 .landing-page li{
     font-size: 14pt;
     margin: 10px 0;
+}
+
+.landing-page .box{
+    height: 300px;
+}
+
+.landing-page li:nth-child(even){
+    background: #003B59;
 }

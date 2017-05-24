@@ -35,5 +35,13 @@ export const winrateReducer = (state = initialState, action) => {
         return newState;
     }
 
+    else if (action.type === actions.LOG_IN_USER_SUCCESS){
+        return action.userData;
+    }
+
+    else if (action.type === actions.LOG_IN_USER_ERROR){
+        return {user: "error logging in"}
+    }
+
     return state;
 }
