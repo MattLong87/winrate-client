@@ -1,13 +1,25 @@
 .landing-page header{
     background-color: #F5AB35;
     color: white;
-    padding: 30px 0;
+    padding-top: 100px;
+    padding-bottom: 30px;
     /*clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);*/
 }
 
-body{
+.home{
     background: #002D45;
     color: #fff;
+}
+
+html, body, #root, [data-reactroot], 
+.landing-page{
+    height: 100%;
+}
+
+.landing-page{
+    background: #002D45;
+    color: #fff;
+    height: 100%;
 }
 
 .landing-page img{
@@ -32,7 +44,7 @@ body{
 }
 
 .landing-page .box{
-    height: 300px;
+    height: 100px;
 }
 
 .landing-page li:nth-child(even){

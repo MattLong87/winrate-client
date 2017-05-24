@@ -1,4 +1,5 @@
 const { API_BASE_URL } = require('../config');
+var Router = require('react-router');
 
 export const ADD_SESSION = 'ADD_SESSION';
 export const addSession = session => ({
@@ -8,10 +9,16 @@ export const addSession = session => ({
 
 export const logInUser = () => dispatch => {
     const loginForm = new FormData(document.getElementById('login-form'));
+    let result = {};
+    for (var entry of loginForm.entries()) {
+        result[entry[0]] = entry[1];
+    }
+    result = JSON.stringify(result)
     console.log(loginForm);
     fetch(`${API_BASE_URL}/login`, {
         method: "POST",
-        body: loginForm
+        headers: new Headers({'content-type': 'application/json'}),
+        body: result
     })
         .then(res => {
             if (!res.ok) {
@@ -20,6 +27,7 @@ export const logInUser = () => dispatch => {
             return res.json();
         }).then(userData => {
             dispatch(logInUserSuccess(userData));
+            window.history.pushState({}, "", "dashboard")
         }).catch(err => dispatch(logInUserError(err)));
 };
 

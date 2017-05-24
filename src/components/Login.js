@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
+import '../css/login.css'
 
 export class Login extends React.Component {
 
@@ -11,6 +12,7 @@ export class Login extends React.Component {
 
     render() {
         return (
+            <div className='login'>
             <form className='login-form' id='login-form' onSubmit={(e) => this.login(e)}>
                 <div>
                     <label htmlFor="email">Email</label>
@@ -22,6 +24,7 @@ export class Login extends React.Component {
                 </div>
                 <button type='submit'>Log In</button>
             </form>
+            </div>
         )
     }
 }
