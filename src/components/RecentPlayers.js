@@ -5,7 +5,7 @@ export default function RecentPlayers(props) {
         return <div></div>
     }
     let lis = props.recentPlayers.map((player, i) => {
-        return <li key={i}>{player}</li>
+        return <li key={i}>player</li>
     })
     return (
         <div>

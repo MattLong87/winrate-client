@@ -14,7 +14,7 @@ export function Dashboard(props) {
 
             <OverallWinrate winrate={calculateWinrate(props.user, props.user.name.firstName)} />
 
-            <RecentPlayers recentPlayers={props.user.recentPlayers} />
+            <RecentPlayers recentPlayers={props.user.sessions[0].players} />
 
             <RecentSessions sessions={props.user.sessions} />
         </div>
