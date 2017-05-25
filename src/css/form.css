@@ -1,4 +1,4 @@
-input{
+input[type='text']{
     height: 45px;
     width: 300px;
     border-radius: 5px;
@@ -44,7 +44,7 @@ label{
     padding: 5px;
 }
 
-input{
+input[type='text']{
     margin-bottom: 20px;
 }
 

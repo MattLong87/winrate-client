@@ -20,11 +20,11 @@ export class AddSession extends React.Component {
                 }
             })
         })
-        playerCheckboxes = allPlayers.map(player => {
-            return (<div><input type="checkbox" name="player" value={player} /> {player}</div>)
+        playerCheckboxes = allPlayers.map((player, i) => {
+            return (<div key={i}><input type="checkbox" name="player" value={player} /> {player}</div>)
         })
-        let winnerOptions = allPlayers.map(player => {
-            return (<option>{player}</option>);
+        let winnerOptions = allPlayers.map((player, j) => {
+            return (<option key={j}>{player}</option>);
         })
         return (
             <div className='add-session'>
