@@ -7,7 +7,7 @@ export default function RecentSessions(props) {
         <div>
             {props.sessions.map(function (session, i) {
                 return (
-                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} />
+                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} sessionId={session._id} token={props.token}/>
                 )
             })}
         </div>

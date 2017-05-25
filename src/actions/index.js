@@ -1,10 +1,32 @@
 const { API_BASE_URL } = require('../config');
 var Router = require('react-router');
 
-export const ADD_SESSION = 'ADD_SESSION';
-export const addSession = session => ({
-    type: ADD_SESSION,
-    session
+export const deleteSession = (sessionId, token) => dispatch => {
+    fetch(`${API_BASE_URL}/users/me/sessions?access_token=${token}`, {
+        method: "DELETE", 
+        headers: new Headers({ 'content-type': 'application/json' }),
+        body: JSON.stringify({sessionId})
+    })
+    .then(res => {
+        if (!res.ok){
+            return Promise.reject(res.statusText);
+        }
+        return res.json();
+    }).then(userData => {
+        dispatch(deleteSessionSuccess(userData))
+    }).catch(err => dispatch(deleteSessionError(err)))
+}
+
+export const DELETE_SESSION_SUCCESS = "DELETE_SESSION_SUCCESS";
+export const deleteSessionSuccess = userData => ({
+    type: DELETE_SESSION_SUCCESS,
+    userData
+})
+
+export const DELETE_SESSION_ERROR = "DELETE_SESSION_ERROR";
+export const deleteSessionError = err => ({
+    type: DELETE_SESSION_ERROR,
+    err
 })
 
 export const logInUser = () => dispatch => {

@@ -54,5 +54,13 @@ export const winrateReducer = (state = initialState, action) => {
         return { user: "error signing up" }
     }
 
+    else if (action.type === actions.DELETE_SESSION_SUCCESS) {
+        return { user: action.userData };
+    }
+
+    else if (action.type === actions.DELETE_SESSION_ERROR) {
+        return { user: "error deleting session" }
+    }
+
     return state;
 }

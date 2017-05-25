@@ -20,7 +20,7 @@ export function Dashboard(props) {
 
             <RecentPlayers recentPlayers={recentPlayers} />
 
-            <RecentSessions sessions={props.user.sessions} />
+            <RecentSessions sessions={props.user.sessions} token={props.user.token}/>
         </div>
     );
 }

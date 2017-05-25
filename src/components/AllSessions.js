@@ -7,7 +7,7 @@ export function AllSessions(props) {
         <div>
             {props.user.sessions.map(function (session, i) {
                 return (
-                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} />
+                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} sessionId={session._id} token={props.token}/>
                 )
             })}
         </div>

@@ -1,7 +1,9 @@
 import React from 'react';
+import * as actions from '../actions';
+import {connect} from 'react-redux';
 import '../css/session.css'
 
-export default function Session(props) {
+export function Session(props) {
     const players = props.players.map(player => {
         return `${player} `;
     })
@@ -12,7 +14,8 @@ export default function Session(props) {
                 <section className='players'>Players: {players}</section>
                 <section className='winner'>Winner: {props.winner}</section>
                 <section className='date'>{props.date}</section>
-                <a href="#">Delete Session</a>
+                <span onClick={(e)=>{
+                    props.dispatch(actions.deleteSession(props.sessionId, props.token))}}>Delete Session</span>
             </section>
         </div>
     )
@@ -21,3 +24,9 @@ export default function Session(props) {
 function toggleExpand(e){
     e.target.classList.toggle('expanded');
 }
+
+const mapStateToProps = state => ({
+    user: state.user
+});
+
+export default connect(mapStateToProps)(Session);
