@@ -1,5 +1,16 @@
 const { API_BASE_URL } = require('../config');
-var Router = require('react-router');
+
+export const DELETE_SESSION_SUCCESS = "DELETE_SESSION_SUCCESS";
+export const deleteSessionSuccess = userData => ({
+    type: DELETE_SESSION_SUCCESS,
+    userData
+})
+
+export const DELETE_SESSION_ERROR = "DELETE_SESSION_ERROR";
+export const deleteSessionError = err => ({
+    type: DELETE_SESSION_ERROR,
+    err
+})
 
 export const deleteSession = (sessionId, token) => dispatch => {
     fetch(`${API_BASE_URL}/users/me/sessions?access_token=${token}`, {
@@ -17,15 +28,15 @@ export const deleteSession = (sessionId, token) => dispatch => {
     }).catch(err => dispatch(deleteSessionError(err)))
 }
 
-export const DELETE_SESSION_SUCCESS = "DELETE_SESSION_SUCCESS";
-export const deleteSessionSuccess = userData => ({
-    type: DELETE_SESSION_SUCCESS,
+export const LOG_IN_USER_SUCCESS = "LOG_IN_USER_SUCCESS";
+export const logInUserSuccess = userData => ({
+    type: LOG_IN_USER_SUCCESS,
     userData
 })
 
-export const DELETE_SESSION_ERROR = "DELETE_SESSION_ERROR";
-export const deleteSessionError = err => ({
-    type: DELETE_SESSION_ERROR,
+export const LOG_IN_USER_ERROR = "LOG_IN_USER_ERROR";
+export const logInUserError = err => ({
+    type: LOG_IN_USER_ERROR,
     err
 })
 
@@ -51,15 +62,15 @@ export const logInUser = () => dispatch => {
         }).catch(err => dispatch(logInUserError(err)));
 };
 
-export const LOG_IN_USER_SUCCESS = "LOG_IN_USER_SUCCESS";
-export const logInUserSuccess = userData => ({
-    type: LOG_IN_USER_SUCCESS,
+export const SIGN_UP_USER_SUCCESS = "SIGN_UP_USER_SUCCESS";
+export const signUpUserSuccess = userData => ({
+    type: SIGN_UP_USER_SUCCESS,
     userData
 })
 
-export const LOG_IN_USER_ERROR = "LOG_IN_USER_ERROR";
-export const logInUserError = err => ({
-    type: LOG_IN_USER_ERROR,
+export const SIGN_UP_USER_ERROR = "SIGN_UP_USER_ERROR";
+export const signUpUserError = err => ({
+    type: SIGN_UP_USER_ERROR,
     err
 })
 
@@ -84,15 +95,3 @@ export const signUpUser = () => dispatch => {
             dispatch(signUpUserSuccess(userData));
         }).catch(err => dispatch(signUpUserError(err)));
 }
-
-export const SIGN_UP_USER_SUCCESS = "SIGN_UP_USER_SUCCESS";
-export const signUpUserSuccess = userData => ({
-    type: SIGN_UP_USER_SUCCESS,
-    userData
-})
-
-export const SIGN_UP_USER_ERROR = "SIGN_UP_USER_ERROR";
-export const signUpUserError = err => ({
-    type: SIGN_UP_USER_ERROR,
-    err
-})
