@@ -39,7 +39,10 @@ export const winrateReducer = (state = initialState, action) => {
     }
 
     else if (action.type === actions.LOG_IN_USER_SUCCESS) {
-        return { user: action.userData };
+        return { 
+            user: action.userData,
+            isLoggedIn: true
+         };
     }
 
     else if (action.type === actions.LOG_IN_USER_ERROR) {
@@ -47,7 +50,10 @@ export const winrateReducer = (state = initialState, action) => {
     }
 
     else if (action.type === actions.SIGN_UP_USER_SUCCESS) {
-        return { user: action.userData };
+        return { 
+            user: action.userData,
+            isLoggedIn: true 
+        };
     }
 
     else if (action.type === actions.SIGN_UP_USER_ERROR) {
@@ -55,7 +61,10 @@ export const winrateReducer = (state = initialState, action) => {
     }
 
     else if (action.type === actions.DELETE_SESSION_SUCCESS) {
-        return { user: action.userData };
+        return { 
+            user: action.userData,
+            isLoggedIn: true 
+        };
     }
 
     else if (action.type === actions.DELETE_SESSION_ERROR) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import * as actions from '../actions';
 import '../css/form.css'
 import '../css/signup.css'
@@ -10,6 +11,9 @@ export class SignUp extends React.Component {
         this.props.dispatch(actions.signUpUser());
     }
     render() {
+        if (this.props.isLoggedIn) {
+            return <Redirect to={'/dashboard'} />
+        }
         return (<div className='signup'>
             <form className='signup-form' id='signup-form' onSubmit={(e) => this.signUp(e)}>
                 <div>
@@ -36,6 +40,7 @@ export class SignUp extends React.Component {
 }
 
 const mapStateToProps = state => ({
+    isLoggedIn: state.isLoggedIn,
     user: state.user
 });
 
