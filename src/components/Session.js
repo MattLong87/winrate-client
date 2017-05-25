@@ -14,7 +14,7 @@ export function Session(props) {
                 <section className='players'>Players: {players}</section>
                 <section className='winner'>Winner: {props.winner}</section>
                 <section className='date'>{props.date}</section>
-                <span onClick={(e)=>{
+                <span className='delete-session' onClick={(e)=>{
                     props.dispatch(actions.deleteSession(props.sessionId, props.token))}}>Delete Session</span>
             </section>
         </div>

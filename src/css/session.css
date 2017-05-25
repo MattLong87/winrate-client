@@ -16,3 +16,7 @@
 .session .expanded + .session-info{
     max-height: 400px;
 }
+
+.session .delete-session{
+    color: #F7097C;
+}
