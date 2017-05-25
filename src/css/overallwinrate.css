@@ -1,0 +1,22 @@
+.overall-winrate{
+    padding: 20px 0;
+}
+.my-winrate-header{
+    display: block;
+    font-size: 14pt;
+}
+
+.my-winrate-wrapper{
+    font-size: 34pt;
+    display: inline-block;
+    border-radius: 50%;
+    height: 25vw;
+    width: 25vw;
+    line-height: 25vw;
+    background: #F7097C;
+
+}
+
+.my-winrate{
+    color: white;
+}

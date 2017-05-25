@@ -14,9 +14,11 @@ export function Dashboard(props) {
     }
     return (
         <div className='dashboard'>
-            <header>{props.user.name.firstName}'s Dashboard</header>
+            <header>
+                <span className='dashboard-title'>{props.user.name.firstName}'s Dashboard</span>
 
-            <OverallWinrate winrate={calculateWinrate(props.user, props.user.name.firstName)} />
+                <OverallWinrate winrate={calculateWinrate(props.user, props.user.name.firstName)} />
+            </header>
 
             <RecentPlayers recentPlayers={recentPlayers} />
 
