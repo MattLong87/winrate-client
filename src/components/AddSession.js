@@ -38,6 +38,7 @@ export class AddSession extends React.Component {
                         <section id="players-input">
                             <label htmlFor="players">Players:</label>
                             {playerCheckboxes}
+                            <input id='add-player' type='text' name='add-player' placeholder='Add a player' />
                         </section>
                     </div>
                     <section id="hidden-inputs"></section>
