@@ -8,7 +8,7 @@ export default function LandingPage() {
         <div className='landing-page'>
             <header>
                 <img src={logo} alt='WinRate Logo' />
-                <h2>Stat Tracking for Boardgamers</h2>
+                <div><h2>Stat Tracking for Boardgamers</h2></div>
             </header>
             <main>
                 <h3>How to Use WinRate</h3>

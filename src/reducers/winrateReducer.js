@@ -2,8 +2,11 @@ import * as actions from '../actions';
 
 const initialState = {
     user: {
-        winrate: 26,
-        recentPlayers: ["Jon", "Steven", "Kyle"],
+        username: "MattLong87",
+        name: {
+            firstName: "Matt",
+            lastName: "Long"
+        },
         sessions: [{
             game: "Puerto Rico",
             players: ["Matt", "Jon", "Steven"],
@@ -19,7 +22,7 @@ const initialState = {
         {
             game: "Agricola",
             players: ["Matt", "Jon", "Ian", "James"],
-            winner: "Ian",
+            winner: "Matt",
             date: "May 8, 2017"
         }]
     }

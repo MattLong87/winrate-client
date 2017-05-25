@@ -1,14 +1,9 @@
 .landing-page header{
-    background-color: #F5AB35;
+    background-color: #00F7CE;
     color: white;
     padding-top: 100px;
     padding-bottom: 30px;
     /*clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);*/
-}
-
-.home{
-    background: #002D45;
-    color: #fff;
 }
 
 html, body, #root, [data-reactroot], 
@@ -17,8 +12,8 @@ html, body, #root, [data-reactroot],
 }
 
 .landing-page{
-    background: #002D45;
-    color: #fff;
+    background: #f7e956;
+    color: #000;
     height: 100%;
 }
 
@@ -28,10 +23,13 @@ html, body, #root, [data-reactroot],
 }
 
 .landing-page h2{
-    font-size: 16pt;
+    font-size: 15pt;
     text-transform: lowercase;
-    font-style: italic;
-}
+    background: #333;
+    display: inline;
+    padding: 0px 30px;
+    border-radius: 20px;
+    }
 
 .landing-page h3{
     font-size: 18pt;
@@ -48,5 +46,5 @@ html, body, #root, [data-reactroot],
 }
 
 .landing-page li:nth-child(even){
-    background: #003B59;
+    background: #f7e956;
 }

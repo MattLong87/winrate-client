@@ -11,5 +11,5 @@ export default function calculateWinrate(user, player){
             }
         })
     })
-    return (gamesWon/gamesPlayed) * 100;
+    return Math.round((gamesWon/gamesPlayed) * 100);
 }
