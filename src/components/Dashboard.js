@@ -8,13 +8,17 @@ import calculateWinrate from '../calculateWinrate';
 import '../css/dashboard.css';
 
 export function Dashboard(props) {
+    let recentPlayers = [];
+    if (props.user.sessions[0]){
+        recentPlayers = props.user.sessions[0].players;
+    }
     return (
         <div className='dashboard'>
-            <header>MattLong87's Dashboard</header>
+            <header>{props.user.name.firstName}'s Dashboard</header>
 
             <OverallWinrate winrate={calculateWinrate(props.user, props.user.name.firstName)} />
 
-            <RecentPlayers recentPlayers={props.user.sessions[0].players} />
+            <RecentPlayers recentPlayers={recentPlayers} />
 
             <RecentSessions sessions={props.user.sessions} />
         </div>

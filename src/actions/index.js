@@ -14,10 +14,9 @@ export const logInUser = () => dispatch => {
         result[entry[0]] = entry[1];
     }
     result = JSON.stringify(result)
-    console.log(loginForm);
     fetch(`${API_BASE_URL}/login`, {
         method: "POST",
-        headers: new Headers({'content-type': 'application/json'}),
+        headers: new Headers({ 'content-type': 'application/json' }),
         body: result
     })
         .then(res => {
@@ -39,5 +38,39 @@ export const logInUserSuccess = userData => ({
 export const LOG_IN_USER_ERROR = "LOG_IN_USER_ERROR";
 export const logInUserError = err => ({
     type: LOG_IN_USER_ERROR,
+    err
+})
+
+export const signUpUser = () => dispatch => {
+    const signUpForm = new FormData(document.getElementById('signup-form'));
+    let result = {};
+    for (var entry of signUpForm.entries()) {
+        result[entry[0]] = entry[1];
+    }
+    result = JSON.stringify(result)
+    fetch(`${API_BASE_URL}/users`, {
+        method: "POST",
+        headers: new Headers({ 'content-type': 'application/json' }),
+        body: result
+    })
+        .then(res => {
+            if (!res.ok) {
+                return Promise.reject(res.statusText);
+            }
+            return res.json();
+        }).then(userData => {
+            dispatch(signUpUserSuccess(userData));
+        }).catch(err => dispatch(signUpUserError(err)));
+}
+
+export const SIGN_UP_USER_SUCCESS = "SIGN_UP_USER_SUCCESS";
+export const signUpUserSuccess = userData => ({
+    type: SIGN_UP_USER_SUCCESS,
+    userData
+})
+
+export const SIGN_UP_USER_ERROR = "SIGN_UP_USER_ERROR";
+export const signUpUserError = err => ({
+    type: SIGN_UP_USER_ERROR,
     err
 })

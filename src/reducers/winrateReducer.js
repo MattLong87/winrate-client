@@ -29,21 +29,29 @@ const initialState = {
 }
 
 export const winrateReducer = (state = initialState, action) => {
-    if (action.type === actions.ADD_SESSION){
-        var newState = {user:{}};
-        for (var key in state.user){
+    if (action.type === actions.ADD_SESSION) {
+        var newState = { user: {} };
+        for (var key in state.user) {
             newState.user[key] = state.user[key];
         }
         newState.user.sessions.push(action.session);
         return newState;
     }
 
-    else if (action.type === actions.LOG_IN_USER_SUCCESS){
-        return {user: action.userData};
+    else if (action.type === actions.LOG_IN_USER_SUCCESS) {
+        return { user: action.userData };
     }
 
-    else if (action.type === actions.LOG_IN_USER_ERROR){
-        return {user: "error logging in"}
+    else if (action.type === actions.LOG_IN_USER_ERROR) {
+        return { user: "error logging in" }
+    }
+
+    else if (action.type === actions.SIGN_UP_USER_SUCCESS) {
+        return { user: action.userData };
+    }
+
+    else if (action.type === actions.SIGN_UP_USER_ERROR) {
+        return { user: "error signing up" }
     }
 
     return state;

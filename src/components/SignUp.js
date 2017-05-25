@@ -1,26 +1,39 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
+import '../css/signup.css'
 
-export default function SignUp() {
-
-    return (
-        <form className='signup-form'>
+export class SignUp extends React.Component {
+    signUp(e) {
+        e.preventDefault();
+        this.props.dispatch(actions.signUpUser());
+    }
+    render() {
+        return (<form className='signup-form' id='signup-form' onSubmit={(e) => this.signUp(e)}>
             <div>
-                <label for="first-name">First name</label>
-                <input placeholder='First Name' type="text" name='first-name' id='first-name' />
+                <label htmlFor="firstName">First name</label>
+                <input placeholder='First Name' type="text" name='firstName' id='firstName' />
             </div>
             <div>
-                <label for="last-name">Last name</label>
-                <input type="text" name='last-name' id='last-name' placeholder='Last Name' />
+                <label htmlFor="lastName">Last name</label>
+                <input type="text" name='lastName' id='lastName' placeholder='Last Name' />
             </div>
             <div>
-                <label for="username">Email</label>
-                <input type="text" name='username' id='username' />
+                <label htmlFor="email">Email</label>
+                <input type="text" name='email' id='email' />
             </div>
             <div>
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input type="password" name='password' id='password' />
             </div>
             <button type='submit'>Sign Up</button>
         </form>
-    )
+        )
+    }
 }
+
+const mapStateToProps = state => ({
+    user: state.user
+});
+
+export default connect(mapStateToProps)(SignUp);
