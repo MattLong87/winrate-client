@@ -28,10 +28,21 @@ export const deleteSession = (sessionId, token) => dispatch => {
         }).catch(err => dispatch(deleteSessionError(err)))
 }
 
-export const addSession = () => dispatch => {
+export const ADD_SESSION_SUCCESS = "ADD_SESSION_SUCCESS";
+export const addSessionSuccess = userData => ({
+    type: ADD_SESSION_SUCCESS,
+    userData
+})
+
+export const ADD_SESSION_ERROR = "ADD_SESSION_ERROR";
+export const addSessionError = err => ({
+    type: ADD_SESSION_ERROR,
+    err
+})
+
+export const addSession = (token) => dispatch => {
     const addSessionForm = document.getElementById('add-session-form');
     const elements = addSessionForm.elements;
-    console.log(elements.gameName);
     let body = {
         game: elements.gameName.value,
         players: [],
@@ -49,7 +60,19 @@ export const addSession = () => dispatch => {
             body.winner = element.value;
         }
     })
-    console.log(body);
+    fetch(`${API_BASE_URL}/users/me/add-session?access_token=${token}`, {
+        method: "POST",
+        headers: new Headers({ 'content-type': 'application/json' }),
+        body: JSON.stringify(body)
+    })
+        .then(res => {
+            if (!res.ok) {
+                return Promise.reject(res.statusText);
+            }
+            return res.json();
+        }).then(userData => {
+            dispatch(addSessionSuccess(userData));
+        }).catch(err => dispatch(addSessionError(err)));
 }
 
 export const LOG_IN_USER_SUCCESS = "LOG_IN_USER_SUCCESS";

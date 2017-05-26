@@ -12,6 +12,10 @@ input:focus{
     outline: 1px solid #F7097C;
 }
 
+form input:hover{
+    border: 2px solid #F7097C;
+}
+
 label{
     display: block;
     font-size: 14pt;
@@ -26,6 +30,10 @@ form button{
 
 form button:focus{
     outline: 1px solid #F7097C;
+}
+
+form button:hover{
+    border: 2px solid #F7097C;
 }
 
 /* copied these over from login.css. see if I like them generically */

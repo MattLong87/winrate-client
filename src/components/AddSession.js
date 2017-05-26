@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import '../css/addSession.css';
 
 export class AddSession extends React.Component {
-
+    //using local state here to allow for adding to list of players
     constructor(props) {
         super(props);
         let allPlayers = [];
@@ -20,7 +20,7 @@ export class AddSession extends React.Component {
 
     addSession(e) {
         e.preventDefault();
-        this.props.dispatch(actions.addSession());
+        this.props.dispatch(actions.addSession(this.props.user.token));
     }
 
     addPlayer(e) {
