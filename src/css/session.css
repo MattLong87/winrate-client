@@ -18,5 +18,9 @@
 }
 
 .session .delete-session{
-    color: #F7097C;
+    background: #F7097C;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #F7097C;
+    border-radius: 20px;
 }
