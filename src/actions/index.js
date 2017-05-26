@@ -14,18 +14,42 @@ export const deleteSessionError = err => ({
 
 export const deleteSession = (sessionId, token) => dispatch => {
     fetch(`${API_BASE_URL}/users/me/sessions?access_token=${token}`, {
-        method: "DELETE", 
+        method: "DELETE",
         headers: new Headers({ 'content-type': 'application/json' }),
-        body: JSON.stringify({sessionId})
+        body: JSON.stringify({ sessionId })
     })
-    .then(res => {
-        if (!res.ok){
-            return Promise.reject(res.statusText);
+        .then(res => {
+            if (!res.ok) {
+                return Promise.reject(res.statusText);
+            }
+            return res.json();
+        }).then(userData => {
+            dispatch(deleteSessionSuccess(userData))
+        }).catch(err => dispatch(deleteSessionError(err)))
+}
+
+export const addSession = () => dispatch => {
+    const addSessionForm = document.getElementById('add-session-form');
+    const elements = addSessionForm.elements;
+    console.log(elements.gameName);
+    let body = {
+        game: elements.gameName.value,
+        players: [],
+        winner: elements.winner.value,
+        date: Date.now()
+    };
+    elements.player.forEach((element) => {
+        if (element.name === "player" && element.checked) {
+            body.players.push(element.value)
         }
-        return res.json();
-    }).then(userData => {
-        dispatch(deleteSessionSuccess(userData))
-    }).catch(err => dispatch(deleteSessionError(err)))
+        else if (element.name === "game") {
+            body.game = element.value;
+        }
+        else if (element.name === "winner") {
+            body.winner = element.value;
+        }
+    })
+    console.log(body);
 }
 
 export const LOG_IN_USER_SUCCESS = "LOG_IN_USER_SUCCESS";

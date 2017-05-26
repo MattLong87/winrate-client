@@ -18,6 +18,11 @@ export class AddSession extends React.Component {
         this.state = { allPlayers }
     }
 
+    addSession(e) {
+        e.preventDefault();
+        this.props.dispatch(actions.addSession());
+    }
+
     addPlayer(e) {
         if (e.keyCode === 13) {
             e.preventDefault();
@@ -38,11 +43,9 @@ export class AddSession extends React.Component {
         return (
             <div className='add-session'>
                 <h1>Add a Session</h1>
-                <form id="js-add-session" onSubmit={function (e) { this.addSession(e) }}>
-                    <div className="game-name">
-                        <label htmlFor="game">Game:</label>
-                        <input id="js-select-game" type="text" name="game" placeholder="Game Name" ref={(a) => { this.gameName = a }} />
-                    </div>
+                <form id="add-session-form" onSubmit={(e) => this.addSession(e)}>
+                    <label htmlFor="gameName">Game:</label>
+                    <input id="gameName" type="text" name="gameName" placeholder="Game Name" />
                     <div className="players-input">
                         <section id="players-input">
                             <label htmlFor="players">Players:</label>
@@ -50,7 +53,6 @@ export class AddSession extends React.Component {
                             <input id='add-player' onKeyDown={(e) => { this.addPlayer(e) }} type='text' name='add-player' placeholder='Add a player' />
                         </section>
                     </div>
-                    <section id="hidden-inputs"></section>
                     <div className="winner-selection">
                         <label htmlFor="winner">Winner:</label>
                         <select name="winner" id="winner">
