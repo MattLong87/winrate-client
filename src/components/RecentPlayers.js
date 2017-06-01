@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/recentplayers.css';
 
 export default function RecentPlayers(props) {
     if (!props.recentPlayers){

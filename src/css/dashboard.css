@@ -7,12 +7,23 @@
     font-size: 30pt;
 }
 
+.dashboard .panels{
+    /*flex display keeps panels the same height*/
+    display: flex;
+}
+
 .dashboard .recent-players{
     width: 50%;
-    display: inline-block
 }
 
 .dashboard .most-played{
     width: 50%;
-    display: inline-block
+}
+
+.dashboard .recent-sessions-header{
+    background: rgb(173,173,173);
+    text-transform: uppercase;
+    font-size: 12pt;
+    letter-spacing: 2px;
+    padding: 6px 0 3px 0;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/mostplayed.css';
 
 export default function MostPlayed(props) {
     if (!props.sessions){
