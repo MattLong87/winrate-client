@@ -3,6 +3,10 @@
     overflow: hidden;
 }
 
+.session .title:hover{
+    cursor: pointer;
+}
+
 .session .title{
     font-size: 18pt;
     padding: 10px 0;
