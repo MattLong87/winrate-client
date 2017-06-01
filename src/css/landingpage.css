@@ -29,22 +29,65 @@ html, body, #root, [data-reactroot],
     display: inline;
     padding: 0px 30px;
     border-radius: 20px;
-    }
-
-.landing-page h3{
-    font-size: 18pt;
-    margin-top: 30px;
 }
 
-.landing-page li{
-    font-size: 14pt;
-    margin: 10px 0;
+.top-box{
+    background-image: url(../../img/catan.png);
+}
+
+.mid-box{
+    background-image: url(../../img/pandemic.png);
+}
+
+.bottom-box{
+    background-image: url(../../img/viticulture.png);
+}
+
+.landing-page .overlay{
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+.landing-page .overlay-top{
+    background: rgba(247, 233, 86, 0.72);
+}
+
+.landing-page .overlay-mid{
+    background: rgba(255, 91, 170, 0.72)
+}
+
+.landing-page .overlay-bottom{
+    background: rgba(162, 255, 109, 0.72)
 }
 
 .landing-page .box{
-    height: 100px;
+    display: block;
+    height: 300px;
+    background-size: cover;
+    color: white;
+    position: relative;
+    font-weight: bold;
 }
 
-.landing-page li:nth-child(even){
-    background: #f7e956;
+.landing-page .feature{
+    font-size: 22pt;
+    color: white;
+    width: 50%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 30px;
+    position: absolute;
+}
+
+.landing-page .overlay-top .feature{
+    left: 15px;
+}
+
+.landing-page .overlay-mid .feature{
+    position: relative;
+}
+
+.landing-page .overlay-bottom .feature{
+    right: 15px;
 }
