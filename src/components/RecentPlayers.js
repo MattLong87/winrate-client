@@ -8,7 +8,7 @@ export default function RecentPlayers(props) {
         return <li key={i}>{player}</li>
     })
     return (
-        <div>
+        <div className='recent-players'>
             <span className='recent-players-header'>Recent Players</span>
             <ul>
                 {lis}

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import OverallWinrate from './OverallWinrate';
 import RecentPlayers from './RecentPlayers';
+import MostPlayed from './MostPlayed';
 import RecentSessions from './RecentSessions';
 import calculateWinrate from '../calculateWinrate';
 
@@ -21,6 +22,8 @@ export function Dashboard(props) {
             </header>
 
             <RecentPlayers recentPlayers={recentPlayers} />
+
+            <MostPlayed sessions={props.user.sessions} />
 
             <RecentSessions sessions={props.user.sessions} token={props.user.token}/>
         </div>
