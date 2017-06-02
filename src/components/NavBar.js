@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <nav>
             <ul>
-                <li className='top-li'><img src={hamburger} className='hamburger' onClick={(e) => toggleNavExpand(e)} alt='expand navigation' /></li>
+                <li className='top-li'><img src={hamburger} className='hamburger' id='hamburger' onClick={(e) => toggleNavExpand(e)} alt='expand navigation' /></li>
                 <section className='nav-links'>
                     <li><Link to='/' onClick={(e) => linkToggleNavExpand(e)}>WinRate</Link></li>
                     <li><Link to='/dashboard' onClick={(e) => linkToggleNavExpand(e)}>Dashboard</Link></li>
@@ -28,5 +28,6 @@ function toggleNavExpand(e) {
 }
 
 function linkToggleNavExpand(e) {
+    document.getElementById('hamburger').classList.toggle('rotated');
     e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle('nav-expanded');
 }
