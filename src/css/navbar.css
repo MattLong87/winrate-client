@@ -41,6 +41,11 @@ nav .hamburger{
     width: 40px;
     position: absolute;
     right: 30px;
+    transition: all .2s ease;
+}
+
+nav .rotated{
+    transform: rotate(-90deg) scaleX(.7);
 }
 
 nav a:hover{

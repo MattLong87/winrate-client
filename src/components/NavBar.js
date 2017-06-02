@@ -23,6 +23,7 @@ export default function NavBar() {
 }
 
 function toggleNavExpand(e) {
+    e.target.classList.toggle('rotated');
     e.target.parentElement.parentElement.parentElement.classList.toggle('nav-expanded');
 }
 
