@@ -31,15 +31,15 @@ html, body, #root, [data-reactroot],
 }
 
 .top-box{
-    background-image: url(../../img/catan.png);
+    background-image: url(../../img/catan-bw.png);
 }
 
 .mid-box{
-    background-image: url(../../img/pandemic.png);
+    background-image: url(../../img/pandemic-bw.png);
 }
 
 .bottom-box{
-    background-image: url(../../img/viticulture.png);
+    background-image: url(../../img/viticulture-bw.png);
 }
 
 .landing-page .overlay{
@@ -49,15 +49,15 @@ html, body, #root, [data-reactroot],
 }
 
 .landing-page .overlay-top{
-    background: rgba(247, 233, 86, 0.72);
+    background: rgba(247, 233, 86, 0.8);
 }
 
 .landing-page .overlay-mid{
-    background: rgba(255, 91, 170, 0.72)
+    background: rgba(255, 91, 170, 0.8)
 }
 
 .landing-page .overlay-bottom{
-    background: rgba(162, 255, 109, 0.72)
+    background: rgba(162, 255, 109, 0.8)
 }
 
 .landing-page .box{
