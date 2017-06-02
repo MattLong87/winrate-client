@@ -30,6 +30,25 @@ html, body, #root, [data-reactroot],
     border-radius: 20px;
 }
 
+.landing-page button{
+    margin: 30px 10px 0px 10px;
+    background: #333;
+    border: 3px solid #f765ab;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14pt;
+    padding: 3px 20px;
+    transition: all .2s ease;
+}
+
+.landing-page button:hover{
+    cursor:pointer;
+    background: #f765ab;
+    color: black;
+    border: 3px solid #333;
+}
+
 .top-box{
     background-image: url(../../img/catan-bw.png);
 }

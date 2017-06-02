@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../img/logo.png';
+import {Link} from 'react-router-dom';
 
 import '../css/landingpage.css';
 
@@ -9,6 +10,8 @@ export default function LandingPage() {
             <header>
                 <img src={logo} alt='WinRate Logo' />
                 <div><h2>Stat Tracking for Boardgamers</h2></div>
+                <Link to='/sign-up'><button>Sign Up</button></Link>
+                <Link to='/login'><button>Log In</button></Link>
             </header>
             <main>
                 <ul>
