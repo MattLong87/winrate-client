@@ -1,8 +1,11 @@
 .login{
     padding-top: 100px;
+    background: #00F7CE;
+    height: 100%;
 }
 
 .login .login-form{
+    background: #fff;
     display: inline-block;
     width: 90vw;
     border: 2px solid #555;
