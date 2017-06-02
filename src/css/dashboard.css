@@ -38,3 +38,7 @@
     color: black;
     text-decoration: underline;
 }
+
+.dashboard .session .title{
+    background: rgba(162, 255, 109, 0.8)
+}

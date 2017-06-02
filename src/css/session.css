@@ -1,5 +1,6 @@
 .session{
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
+    border-bottom: #ccc;
     overflow: hidden;
 }
 
