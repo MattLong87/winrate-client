@@ -1,0 +1,12 @@
+.all-sessions{
+    padding-top: 100px;
+}
+
+.all-sessions h1{
+    font-size: 26pt;
+    margin: 20px 0px;
+}
+
+.all-sessions .session{
+    background: #eee;
+}
