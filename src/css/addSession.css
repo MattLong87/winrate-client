@@ -1,9 +1,27 @@
 .add-session{
-    padding-top: 50px;
+    padding-top: 100px;
     background: #00F7CE;
     height: 100%;
 }
 
 .add-session form{
     background: #fff;
+}
+
+.add-session h1{
+    font-size: 26pt;
+}
+
+.add-session label{
+    font-size: 20pt;
+}
+
+.add-session .player-checkbox{
+    font-size: 14pt;
+}
+
+.add-session .checkbox-container{
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 30px;
 }
