@@ -16,6 +16,10 @@ nav .top-li{
     padding-bottom: 0px;
 }
 
+nav .nav-logo{
+    height: 40px;
+}
+
 nav .nav-links{
     max-height: 0px;
     transition: all .3s ease;
