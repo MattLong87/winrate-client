@@ -93,6 +93,7 @@ export const logInUser = () => dispatch => {
     for (var entry of loginForm.entries()) {
         result[entry[0]] = entry[1];
     }
+    result.email = result.email.toLowerCase();
     result = JSON.stringify(result)
     fetch(`${API_BASE_URL}/login`, {
         method: "POST",
@@ -127,6 +128,7 @@ export const signUpUser = () => dispatch => {
     for (var entry of signUpForm.entries()) {
         result[entry[0]] = entry[1];
     }
+    result.email = result.email.toLowerCase();
     result = JSON.stringify(result)
     fetch(`${API_BASE_URL}/users`, {
         method: "POST",
