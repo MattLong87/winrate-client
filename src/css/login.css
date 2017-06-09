@@ -24,6 +24,10 @@
     margin-bottom: 20px;
 }
 
+.login .log-in-error{
+    color: #F7097C;
+}
+
 .login button{
     margin: 20px;
 }

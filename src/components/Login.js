@@ -16,6 +16,11 @@ export class Login extends React.Component {
         if(this.props.isLoggedIn){
             return <Redirect to={'/dashboard'} />
         }
+
+        let logInError = "";
+        if(this.props.logInError){
+            logInError = <h3 className='log-in-error'>Invalid username or password</h3>
+        }
         
         return (
             <div className='login'>
@@ -28,6 +33,7 @@ export class Login extends React.Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" name='password' id='password' />
                     </div>
+                    {logInError}
                     <button type='submit'>Log In</button>
                 </form>
             </div>
@@ -37,7 +43,8 @@ export class Login extends React.Component {
 
 const mapStateToProps = state => ({
     user: state.user,
-    isLoggedIn: state.isLoggedIn
+    isLoggedIn: state.isLoggedIn,
+    logInError: state.logInError
 });
 
 export default connect(mapStateToProps)(Login);
