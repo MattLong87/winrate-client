@@ -1,12 +1,26 @@
 .all-sessions{
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 .all-sessions h1{
     font-size: 26pt;
-    margin: 20px 0px;
 }
 
 .all-sessions .session{
     background: #eee;
+}
+
+.all-sessions .add-session-link a{
+    text-decoration: none;
+    color: black;
+    margin: 20px 0px 30px 0px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.all-sessions .add-session-link a:hover{
+    border: 1px solid #F7097C;
+    color: #F7097C;
 }
