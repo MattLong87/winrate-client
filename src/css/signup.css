@@ -13,9 +13,10 @@
 }
 
 @media screen and (min-width: 900px){
-    form{
-        width: 100%;
-    }
+    .signup{
+        display: inline-block;
+        width: 60%;
+    }    
 
     .signup h1 {
         font-size: 26pt;

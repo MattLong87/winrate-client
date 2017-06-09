@@ -19,3 +19,15 @@
 .login button{
     margin: 20px;
 }
+
+@media screen and (min-width: 900px){
+    .login{
+        display: inline-block;
+        width: 70%;
+    }
+    
+    .login h1 {
+        font-size: 26pt;
+        margin: 30px;
+    }
+}

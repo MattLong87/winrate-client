@@ -74,11 +74,6 @@ form{
 
 @media screen and (min-width: 900px){
     form{
-        width: 100%;
-    }
-
-    .login h1 {
-        font-size: 26pt;
-        margin: 30px;
+        width: 90%;
     }
 }

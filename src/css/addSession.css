@@ -25,3 +25,9 @@
     display: inline-block;
     margin-bottom: 30px;
 }
+
+@media screen and (min-width: 900px){
+    .add-session{
+        padding-top: 150px;
+    }
+}
