@@ -18,12 +18,14 @@ export class App extends Component {
       <Router>
         <div>
           <NavBar className='navbar' />
-          <Route exact path='/' component={LandingPage} />
-          <Route exact path='/dashboard' component={Dashboard} />
-          <Route exact path='/all-sessions' component={AllSessions} />
-          <Route exact path='/add-session' component={AddSession} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/sign-up' component={SignUp} />
+          <div className='page-container'>
+            <Route exact path='/' component={LandingPage} />
+            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path='/all-sessions' component={AllSessions} />
+            <Route exact path='/add-session' component={AddSession} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/sign-up' component={SignUp} />
+          </div>
         </div>
       </Router>
     );

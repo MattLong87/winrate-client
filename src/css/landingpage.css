@@ -18,7 +18,8 @@ html, body, #root, [data-reactroot],
 }
 
 .landing-page img{
-    width: 80vw;
+    /*width: 80vw;*/
+    width: 80%;
     margin-bottom: 20px;
 }
 

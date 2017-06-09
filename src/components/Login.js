@@ -24,6 +24,7 @@ export class Login extends React.Component {
         
         return (
             <div className='login'>
+                <h1 className='desktop-only'>Login</h1>
                 <form className='login-form' id='login-form' onSubmit={(e) => this.login(e)}>
                     <div>
                         <label htmlFor="email">Email</label>

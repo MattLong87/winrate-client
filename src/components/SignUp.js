@@ -8,20 +8,20 @@ import '../css/signup.css'
 export class SignUp extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {missingFields: []}
+        this.state = { missingFields: [] }
     }
 
     signUp(e) {
         e.preventDefault();
         let requiredFields = ["firstName", "lastName", "email", "password"]
         let emptyFields = [];
-        for (let i=0; i<requiredFields.length; i++){
+        for (let i = 0; i < requiredFields.length; i++) {
             let input = document.getElementById(requiredFields[i]);
-            if (!input.value){
+            if (!input.value) {
                 emptyFields.push(requiredFields[i]);
             }
         }
-        if (emptyFields.length === 0){
+        if (emptyFields.length === 0) {
             this.setState({});
             this.props.dispatch(actions.signUpUser());
         }
@@ -37,11 +37,12 @@ export class SignUp extends React.Component {
             return <Redirect to={'/dashboard'} />
         }
         let missingFields = [];
-        for (let i=0; i<this.state.missingFields.length; i++){
+        for (let i = 0; i < this.state.missingFields.length; i++) {
             missingFields.push(<h3 key={i} className='sign-up-error'>Please enter a {this.state.missingFields[i]}</h3>)
         }
 
         return (<div className='signup'>
+            <h1 className='desktop-only'>Sign Up</h1>
             <form className='signup-form' id='signup-form' onSubmit={(e) => this.signUp(e)}>
                 <div>
                     <label htmlFor="firstName">First name</label>

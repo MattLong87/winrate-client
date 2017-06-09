@@ -11,3 +11,14 @@
 .signup .sign-up-error{
     color: #F7097C;
 }
+
+@media screen and (min-width: 900px){
+    form{
+        width: 100%;
+    }
+
+    .signup h1 {
+        font-size: 26pt;
+        margin: 30px;
+    }
+}
