@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import * as actions from '../actions';
 import '../css/addSession.css';
 
@@ -21,6 +22,7 @@ export class AddSession extends React.Component {
     addSession(e) {
         e.preventDefault();
         this.props.dispatch(actions.addSession(this.props.user.token));
+        this.setState(Object.assign({}, this.state, {sessionAdded: true}));
     }
 
     addPlayer(e) {
@@ -34,12 +36,17 @@ export class AddSession extends React.Component {
     }
 
     render() {
+        if (this.state.sessionAdded) {
+            return <Redirect to={'/dashboard'} />
+        }
+
         let playerCheckboxes = this.state.allPlayers.map((player, i) => {
             return (<div key={i}><input type="checkbox" name="player" value={player} /><span className="player-checkbox">{player}</span></div>)
         })
         let winnerOptions = this.state.allPlayers.map((player, j) => {
             return (<option key={j}>{player}</option>);
         })
+
         return (
             <div className='add-session'>
                 <form id="add-session-form" onSubmit={(e) => this.addSession(e)}>

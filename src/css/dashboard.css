@@ -1,5 +1,5 @@
 .dashboard{
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
 .dashboard header{
@@ -45,4 +45,19 @@
 
 .dashboard .session .title{
     background: #eee;
+}
+
+.dashboard .add-session-link a{
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.dashboard .add-session-link a:hover{
+    border: 1px solid #F7097C;
+    color: #F7097C;
 }

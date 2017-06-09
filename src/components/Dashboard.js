@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import OverallWinrate from './OverallWinrate';
 import RecentPlayers from './RecentPlayers';
 import MostPlayed from './MostPlayed';
@@ -28,6 +28,9 @@ export function Dashboard(props) {
             </section>
             <div className='recent-sessions-header'>Recent Sessions (<Link to='/all-sessions'>View All</Link>)</div>
             <RecentSessions sessions={props.user.sessions} token={props.user.token} />
+            <div className='add-session-link'>
+                <Link to='/add-session'><h4>+ Add a session</h4></Link>
+            </div>
         </div>
     );
 }
