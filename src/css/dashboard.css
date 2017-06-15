@@ -50,7 +50,7 @@
 .dashboard .add-session-link a{
     text-decoration: none;
     color: black;
-    margin-top: 20px;
+    margin: 20px 0;
     display: inline-block;
     border: 1px solid black;
     border-radius: 4px;

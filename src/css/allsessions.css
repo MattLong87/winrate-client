@@ -24,3 +24,9 @@
     border: 1px solid #F7097C;
     color: #F7097C;
 }
+
+@media screen and (min-width: 900px){
+    .all-sessions{
+        height: 100vh;
+    }
+}

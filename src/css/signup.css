@@ -16,6 +16,7 @@
     .signup{
         display: inline-block;
         width: 60%;
+        height: 100vh;
     }    
 
     .signup h1 {

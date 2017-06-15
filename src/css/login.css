@@ -24,6 +24,7 @@
     .login{
         display: inline-block;
         width: 70%;
+        height: 100vh;
     }
     
     .login h1 {
