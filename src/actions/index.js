@@ -13,7 +13,7 @@ export const deleteSessionError = err => ({
 })
 
 export const deleteSession = (sessionId, token) => dispatch => {
-    fetch(`${API_BASE_URL}/users/me/sessions?access_token=${token}`, {
+    return fetch(`${API_BASE_URL}/users/me/sessions?access_token=${token}`, {
         method: "DELETE",
         headers: new Headers({ 'content-type': 'application/json' }),
         body: JSON.stringify({ sessionId })
@@ -60,7 +60,7 @@ export const addSession = (token) => dispatch => {
             body.winner = element.value;
         }
     })
-    fetch(`${API_BASE_URL}/users/me/add-session?access_token=${token}`, {
+    return fetch(`${API_BASE_URL}/users/me/add-session?access_token=${token}`, {
         method: "POST",
         headers: new Headers({ 'content-type': 'application/json' }),
         body: JSON.stringify(body)
@@ -95,7 +95,7 @@ export const logInUser = () => dispatch => {
     }
     result.email = result.email.toLowerCase();
     result = JSON.stringify(result)
-    fetch(`${API_BASE_URL}/login`, {
+    return fetch(`${API_BASE_URL}/login`, {
         method: "POST",
         headers: new Headers({ 'content-type': 'application/json' }),
         body: result
@@ -130,7 +130,7 @@ export const signUpUser = () => dispatch => {
     }
     result.email = result.email.toLowerCase();
     result = JSON.stringify(result)
-    fetch(`${API_BASE_URL}/users`, {
+    return fetch(`${API_BASE_URL}/users`, {
         method: "POST",
         headers: new Headers({ 'content-type': 'application/json' }),
         body: result
