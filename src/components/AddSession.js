@@ -9,20 +9,22 @@ export class AddSession extends React.Component {
     constructor(props) {
         super(props);
         let allPlayers = [];
-        props.user.sessions.forEach(session => {
-            session.players.forEach(player => {
-                if (allPlayers.indexOf(player) === -1) {
-                    allPlayers.push(player);
-                }
+        if (props.user) {
+            props.user.sessions.forEach(session => {
+                session.players.forEach(player => {
+                    if (allPlayers.indexOf(player) === -1) {
+                        allPlayers.push(player);
+                    }
+                })
             })
-        })
+        }
         this.state = { allPlayers }
     }
 
     addSession(e) {
         e.preventDefault();
         this.props.dispatch(actions.addSession(this.props.user.token));
-        this.setState(Object.assign({}, this.state, {sessionAdded: true}));
+        this.setState(Object.assign({}, this.state, { sessionAdded: true }));
     }
 
     addPlayer(e) {
