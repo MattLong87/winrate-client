@@ -1,31 +1,33 @@
 import * as actions from '../actions';
 
 const initialState = {
-    user: {
-        username: "MattLong87",
-        name: {
-            firstName: "Matt",
-            lastName: "Long"
-        },
-        sessions: [{
-            game: "Puerto Rico",
-            players: ["Matt", "Jon", "Steven"],
-            winner: "Jon",
-            date: "May 13, 2017"
-        },
-        {
-            game: "Galaxy Trucker",
-            players: ["Matt", "Jon", "Kyle"],
-            winner: "Kyle",
-            date: "May 11, 2017"
-        },
-        {
-            game: "Agricola",
-            players: ["Matt", "Jon", "Ian", "James"],
-            winner: "Matt",
-            date: "May 8, 2017"
-        }]
-    }
+    // Dummy data if needed
+    // user: {
+    //     username: "MattLong87",
+    //     name: {
+    //         firstName: "Matt",
+    //         lastName: "Long"
+    //     },
+    //     sessions: [{
+    //         game: "Puerto Rico",
+    //         players: ["Matt", "Jon", "Steven"],
+    //         winner: "Jon",
+    //         date: "May 13, 2017"
+    //     },
+    //     {
+    //         game: "Galaxy Trucker",
+    //         players: ["Matt", "Jon", "Kyle"],
+    //         winner: "Kyle",
+    //         date: "May 11, 2017"
+    //     },
+    //     {
+    //         game: "Agricola",
+    //         players: ["Matt", "Jon", "Ian", "James"],
+    //         winner: "Matt",
+    //         date: "May 8, 2017"
+    //     }]
+    // }
+    loggedIn: false
 }
 
 export const winrateReducer = (state = initialState, action) => {
