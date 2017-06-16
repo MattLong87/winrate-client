@@ -2,6 +2,8 @@
 
 WinRate is a responsive, full-stack app that lets users journal their board-gaming sessions and view statistics about their gaming history.
 
+<img src='public/screenshots/screens.png'>
+
 ## Getting Started
 This repo contains the front-end (React) part of the WinRate app. The back-end (Node, MongoDB) is located [here](https://github.com/MattLong87/winrate-api).
 
