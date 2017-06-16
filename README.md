@@ -24,6 +24,7 @@ The app should launch automatically and be live at [localhost:3000](localhost:30
 Board games are a great hobby for spending time with friends and family. However, after a session is over, there's no record of who played or who won - that data is simply lost. WinRate allows users to log their board gaming sessions, including the game played, the names of the players, and the winner.
 
 ## Design and Development
+As this was my first full-stack React app, I documented each step of the process.
 ### Initial Design
 I began by making an inventory of screens that the user would encounter in this first, "MVP" iteration of the app.
 * Landing page
