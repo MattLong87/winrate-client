@@ -34,7 +34,7 @@ I began by making an inventory of screens that the user would encounter in this 
 * User's session history
 * Add session page
 
-Next, for each screen, I coded a basic mobile-first HTML wireframe and identified user flows to determine how the user would interact with elements of each screen and the expected resultant behavior.
+Next, for each screen, I coded a basic mobile-first [HTML wireframe](http://bradfrost.com/blog/post/html-wireframes/) and identified [user flows](https://signalvnoise.com/posts/1926-a-shorthand-for-designing-ui-flows) to determine how the user would interact with elements of each screen and the expected resultant behavior.
 
 ### React Client
 The next step was to translate the wireframes into a static React app to get feedback and make any necessary changes to the structure of the app. Using Facebook's guidelines for [thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html), I identified parts of the app that should be broken into their own components.
