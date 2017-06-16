@@ -20,7 +20,7 @@
     margin: 20px;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 800px){
     .login{
         display: inline-block;
         width: 70%;

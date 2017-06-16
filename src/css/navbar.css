@@ -5,11 +5,14 @@ nav{
     text-align: left;
     padding: 20px;
     padding-bottom: 0px;
-    /*height: 70px;*/
     overflow: hidden;
     position: fixed;
     z-index: 5;
     transition: all .2s ease;
+    max-width: 800px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 nav .top-li{

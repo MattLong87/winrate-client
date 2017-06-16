@@ -8,6 +8,7 @@ import AllSessions from './AllSessions';
 import AddSession from './AddSession';
 import Login from './Login';
 import SignUp from './SignUp';
+import Footer from './Footer';
 
 import '../css/winrate.css';
 
@@ -26,6 +27,7 @@ export class App extends Component {
             <Route exact path='/login' component={Login} />
             <Route exact path='/sign-up' component={SignUp} />
           </div>
+          <Footer />
         </div>
       </Router>
     );

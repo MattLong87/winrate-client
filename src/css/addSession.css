@@ -26,7 +26,7 @@
     margin-bottom: 30px;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 800px){
     .add-session{
         padding-top: 150px;
     }
