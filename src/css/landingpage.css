@@ -51,6 +51,12 @@ html, body, #root, [data-reactroot],
     border: 3px solid #333;
 }
 
+.landing-page .demo-account-button{
+    /*border-color: #F7097C;*/
+    /*background-color: #555;*/
+    font-size: 16pt;
+}
+
 .top-box{
     background-image: url(../../img/catan-bw.png);
 }

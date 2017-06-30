@@ -15,6 +15,10 @@ body{
     display: none;
 }
 
+.page-container{
+    min-height: calc(100vh - 70px);
+}
+
 @media screen and (min-width: 800px){
     body{
         background: #efefef;
@@ -23,7 +27,6 @@ body{
     .page-container{
         max-width: 800px;
         width: 100%;
-        min-height: 90vh;
         display: inline-block;
         background: #00F7CE;
         border-left: 3px solid black;

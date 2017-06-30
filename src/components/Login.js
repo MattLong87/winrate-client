@@ -21,6 +21,14 @@ export class Login extends React.Component {
         if(this.props.logInError){
             logInError = <h3 className='log-in-error'>Invalid username or password</h3>
         }
+
+        let demoEmail = "";
+        let demoPassword = "";
+
+        if(this.props.demoAccount){
+            demoEmail = "Demo_Account@gmail.com";
+            demoPassword = "abc123";
+        }
         
         return (
             <div className='login'>
@@ -28,11 +36,11 @@ export class Login extends React.Component {
                 <form className='login-form' id='login-form' onSubmit={(e) => this.login(e)}>
                     <div>
                         <label htmlFor="email">Email</label>
-                        <input type="text" name='email' id='email' />
+                        <input type="text" name='email' id='email' defaultValue={demoEmail}/>
                     </div>
                     <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' />
+                        <input type="password" name='password' id='password' defaultValue={demoPassword}/>
                     </div>
                     {logInError}
                     <button type='submit'>Log In</button>

@@ -12,6 +12,8 @@ export default function LandingPage() {
                 <div><h2>Stat Tracking for Boardgamers</h2></div>
                 <Link to='/sign-up'><button>Sign Up</button></Link>
                 <Link to='/login'><button>Log In</button></Link>
+                <br />
+                <Link to='/demo-login'><button className="demo-account-button">Try the Demo Account</button></Link>
             </header>
             <main>
                 <ul>

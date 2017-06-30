@@ -11,9 +11,21 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 10pt;
 }
 
 footer .github-logo{
-    width: 50px;
+    width: 30px;
     margin-left: 20px;
+}
+
+@media screen and (min-width: 800px){
+    footer{
+        font-size: inherit;
+    }
+
+    footer .github-logo{
+        padding-top: 10px;
+        width: 50px;
+    }
 }

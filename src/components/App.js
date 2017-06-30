@@ -26,6 +26,9 @@ export class App extends Component {
             <Route exact path='/add-session' component={AddSession} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/sign-up' component={SignUp} />
+            <Route exact path='/demo-login' render={(props) => (
+              <Login {...props} demoAccount={true} />
+            )}/>
           </div>
           <Footer />
         </div>
