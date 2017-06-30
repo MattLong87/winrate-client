@@ -48,3 +48,8 @@ I developed the [back-end API](https://github.com/MattLong87/winrate-api) for Wi
 
 ### Completing the Client
 Finally, I connected the API to the React client, using Redux for state management, and implemented a fully functional version of the app. I wrote tests for each component, action, and the Redux reducer, and ensured the app was responsive on both mobile and desktop.
+
+### Roadmap for v2
+* Additional user features such as deleting account, forgot password functionality
+* More statistics: Which games haven't you played in a while? WinRates per game, instead of overall
+* Linking with a third-party API, such as [BoardGameGeek](http://www.boardgamegeek.com)
