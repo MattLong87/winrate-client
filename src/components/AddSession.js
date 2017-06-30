@@ -9,7 +9,7 @@ export class AddSession extends React.Component {
     constructor(props) {
         super(props);
         let allPlayers = [];
-        if (props.user && !props.user.sessions) {
+        if (props.user && !props.user.sessions.length === 0) {
             allPlayers = [props.user.name.firstName];
         }
         if (props.user) {
