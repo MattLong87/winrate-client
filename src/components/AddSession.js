@@ -9,6 +9,9 @@ export class AddSession extends React.Component {
     constructor(props) {
         super(props);
         let allPlayers = [];
+        if (props.user.sessions) {
+            allPlayers = [props.user.name.firstName];
+        }
         if (props.user) {
             props.user.sessions.forEach(session => {
                 session.players.forEach(player => {
@@ -43,7 +46,7 @@ export class AddSession extends React.Component {
         }
 
         let playerCheckboxes = this.state.allPlayers.map((player, i) => {
-            return (<div key={i}><input type="checkbox" name="player" value={player} /><span className="player-checkbox">{player}</span></div>)
+            return (<div key={i}><input type="checkbox" name="player" id={player + i} value={player} /><label htmlFor={player + i} className="player-checkbox">{player}</label></div>)
         })
         let winnerOptions = this.state.allPlayers.map((player, j) => {
             return (<option key={j}>{player}</option>);
