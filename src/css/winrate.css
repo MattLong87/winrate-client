@@ -23,6 +23,7 @@ body{
     .page-container{
         max-width: 800px;
         width: 100%;
+        min-height: 90vh;
         display: inline-block;
         background: #00F7CE;
         border-left: 3px solid black;
