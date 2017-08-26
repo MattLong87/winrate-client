@@ -6,8 +6,10 @@ export default function RecentSessions(props) {
     return (
         <div>
             {props.sessions.map(function (session, i) {
+                let date = new Date(session.date.parseInt());
+                let formattedDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
                 return (
-                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={session.date} sessionId={session._id} token={props.token}/>
+                    <Session key={i} title={session.game} players={session.players} winner={session.winner} date={formattedDate} sessionId={session._id} token={props.token}/>
                 )
             })}
         </div>
