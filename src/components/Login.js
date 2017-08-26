@@ -19,6 +19,7 @@ export class Login extends React.Component {
 
         let logInError = "";
         if(this.props.logInError){
+            document.getElementsByClassName('login-loading')[0].classList.toggle('hidden');
             logInError = <h3 className='log-in-error'>Invalid username or password</h3>
         }
 
@@ -43,7 +44,9 @@ export class Login extends React.Component {
                         <input type="password" name='password' id='password' defaultValue={demoPassword}/>
                     </div>
                     {logInError}
-                    <button type='submit'>Log In</button>
+                    <button type='submit' onClick={() => {document.getElementsByClassName('login-loading')[0].classList.toggle('hidden')}}>Log In</button>
+                    <br />
+                    <div className='login-loading loader hidden'></div>
                 </form>
             </div>
         )
