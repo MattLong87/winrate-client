@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     text-align: center;
-    background: #00F7CE;
+    background: #FFFFFF;
 }
 
 .desktop-only{
@@ -17,24 +17,4 @@ body{
 
 .page-container{
     min-height: calc(100vh - 70px);
-}
-
-@media screen and (min-width: 800px){
-    body{
-        background: #efefef;
-    }
-
-    .page-container{
-        max-width: 800px;
-        width: 100%;
-        display: inline-block;
-        background: #00F7CE;
-        border-left: 3px solid black;
-        border-right: 3px solid black;
-        box-shadow: 0 0 16px #444;
-    }
-
-    .desktop-only{
-        display: inline-block;
-    }
 }

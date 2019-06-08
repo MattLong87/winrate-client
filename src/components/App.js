@@ -19,7 +19,6 @@ export class App extends Component {
       <Router>
         <div>
           <NavBar className='navbar' />
-          <div className='page-container'>
             <Route exact path='/' component={LandingPage} />
             <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/all-sessions' component={AllSessions} />
@@ -29,7 +28,6 @@ export class App extends Component {
             <Route exact path='/demo-login' render={(props) => (
               <Login {...props} demoAccount={true} />
             )}/>
-          </div>
           <Footer />
         </div>
       </Router>
